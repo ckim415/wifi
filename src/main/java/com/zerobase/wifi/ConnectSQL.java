@@ -1,5 +1,6 @@
 package com.zerobase.wifi;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 
-@RestController
+@Controller
 public class ConnectSQL {
 
     @GetMapping("/connection")
