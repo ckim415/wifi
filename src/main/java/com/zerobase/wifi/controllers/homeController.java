@@ -14,4 +14,11 @@ public class homeController {
         return "home.html";
     }
 
+    /*
+    @RequestMapping("/wifi")
+    public String seoul_wifi() {
+
+    }
+    */
+
 }
