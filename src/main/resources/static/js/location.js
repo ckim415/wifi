@@ -1,14 +1,16 @@
-var x = document.getElementById("demo");
 
 function getLocation() {
-  if (navigator.geolocation) {
+    if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+
+    } else {
+    document.getElementById("lat").value = 0.0;
+    document.getElementById("lnt").value = 0.0;
+    }
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
+    document.getElementById("lat").value = position.coords.latitude;
+    document.getElementById("lnt").value = position.coords.longitude;
 }
+
