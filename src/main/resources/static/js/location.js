@@ -1,16 +1,21 @@
+var LAT = 0.0
+var LNT = 0.0
 
 function getLocation() {
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
-
     } else {
-    document.getElementById("lat").value = 0.0;
-    document.getElementById("lnt").value = 0.0;
+    document.getElementById("lat").innerHTML = LAT;
+    document.getElementById("lnt").innerHTML = LNT;
     }
 }
 
 function showPosition(position) {
-    document.getElementById("lat").value = position.coords.latitude;
-    document.getElementById("lnt").value = position.coords.longitude;
+    LNT = position.coords.longitude;
+    LAT = position.coords.latitude;
+
+    document.getElementById("lat").value = LAT;
+    document.getElementById("lnt").value = LNT;
+    document.getElementById("try").value = position.coords.latitude;
 }
 
