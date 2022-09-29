@@ -16,6 +16,6 @@ function showPosition(position) {
 
     document.getElementById("lat").value = LAT;
     document.getElementById("lnt").value = LNT;
-    document.getElementById("try").value = position.coords.latitude;
+
 }
 

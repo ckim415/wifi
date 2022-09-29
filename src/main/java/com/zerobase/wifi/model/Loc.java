@@ -1,22 +1,12 @@
 package com.zerobase.wifi.model;
 
-public class Loc {
-    public String lat = "1234";
-    public String lnt = "5678";
+import lombok.Data;
 
-    public String getLat() {
-        return lat;
-    }
+import java.time.LocalDateTime;
 
-    public void setLat(String lat) {
-        this.lat = lat;
-    }
-
-    public String getLnt() {
-        return lnt;
-    }
-
-    public void setLnt(String lnt) {
-        this.lnt = lnt;
-    }
+@Data
+class Loc{
+    private String latData;
+    private String lntData;
+    private LocalDateTime time;
 }
